@@ -27,20 +27,36 @@
 
 <body>
 <label for="heartCount">하트 이모지의 최대치(최소치는 0): </label>
-  <input type="range" id="heartCount" name="heartCount" min="0" max="5" value="0" />
-
-  <label for="charLimit">글자의 최대치(최소치는 1): </label>
-  <input type="range" id="charLimit" name="charLimit" min="1" max="10" value="1" />
-
-  <label for="sentenceLength">문장 길이: </label>
-  <input type="range" id="sentenceLength" name="sentenceLength" min="1" max="30" value="1" /><button onclick="create()">
+ <input type="range" id="heartCount" name="heartCount" min="0" max="5" value="0" />
+ <output id="heartOutput">0</output>
+ 
+ <label for="charLimit">글자의 최대치(최소치는 1): </label>
+ <input type="range" id="charLimit" name="charLimit" min="1" max="10" value="1" />
+ <output id="charOutput">1</output>
+ 
+ <label for="sentenceLength">문장 길이: </label>
+ <input type="range" id="sentenceLength" name="sentenceLength" min="1" max="30" value="1" />
+ <output id="sentenceOutput">1</output>
+ 
+ <button onclick="create()">
   만들기
-</button>
+ </button>
 
 <h1 id="main"></h1>
-<h5 id="ver"></h5>
+<h5 id="script ver"></h5>
+<h5>html ver:1.2.6</h5>
 <script src="./main.js">
 </script>
+ <script>
+  document.getElementById("heartCount").addEventListener("input", updateOutput);
+   document.getElementById("charLimit").addEventListener("input", updateOutput);
+   document.getElementById("sentenceLength").addEventListener("input", updateOutput);
+
+   function updateOutput(event){
+     const currentValue = event.target.value;
+      event.target.nextElementSibling.textContent = currentValue;
+    }
+ </script>
   
 </body>
 

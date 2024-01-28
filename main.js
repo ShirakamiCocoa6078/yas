@@ -11,12 +11,12 @@ function create(){
   for(let i=0;i<rand(1,20);i++){
     
     let emojiCount = rand(0,2)
-    for(let j=0;j<emojiCount;j++){
+    for(let j=1;j<emojiCount;j++){
       let emojiNum = rand(0,5)
         emojiStr += emoji[emojiNum]
     }
     
-    let wordCount = rand(1,4)
+    let wordCount = rand(2,4)
     let word2Num = rand(0,5)
     wordStr += word2[word2Num]
     for(let j=0;j<wordCount-1;j++){
@@ -25,7 +25,7 @@ function create(){
     }
     
     let pointCount = rand(2,5)
-    let randomPick = emojiStr+wordStr+".".repeat(pointCount)
+    let randomPick = wordStr+emojiStr+".".repeat(pointCount)
     value += randomPick
     emojiStr= ""
     wordStr = ""

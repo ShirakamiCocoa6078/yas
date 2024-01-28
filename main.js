@@ -4,7 +4,7 @@ let word2 ="흐,하,헤,핫,호,흣".split(",")
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-funtion create(){
+function create(){
   let value = ""
   let emojiStr = ""
   let wordStr = ""
@@ -25,7 +25,7 @@ funtion create(){
     }
     
     let pointCount = rand(2,5)
-    randomPick = emojiStr+wordStr+"."*pointCount
+    let randomPick = emojiStr+wordStr+"."*pointCount
     value += randomPick
     emojiNum, word1Num, word2Num = "","",""
   }

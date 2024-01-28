@@ -12,6 +12,10 @@
   width: 10em;
   height:3em;
   }
+  input[type="range"] {
+      width: 80%;
+      margin: 10px 0;
+  }
  </style>
 </head>
 
@@ -19,14 +23,13 @@
 
 <body>
 <label for="heartCount">하트 이모지의 최대치: </label>
-  <input type="number" id="heartCount" name="heartCount" min="0" placeholder="최소 0" />
+  <input type="range" id="heartCount" name="heartCount" min="0" max="5" value="0" />
 
   <label for="charLimit">글자의 최대치: </label>
-  <input type="number" id="charLimit" name="charLimit" min="1" placeholder="최소 1" />
+  <input type="range" id="charLimit" name="charLimit" min="1" max="10" value="1" />
 
   <label for="sentenceLength">문장 길이: </label>
-  <input type="number" id="sentenceLength" name="sentenceLength" min="1" placeholder="최소 1" />
-<button onclick="create()">
+  <input type="range" id="sentenceLength" name="sentenceLength" min="1" max="30" value="1" /><button onclick="create()">
   만들기
 </button>
 

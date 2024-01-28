@@ -25,9 +25,9 @@ function create(){
     }
     
     let pointCount = rand(2,5)
-    let randomPick = emojiStr+wordStr+"."*pointCount
+    let randomPick = emojiStr+wordStr+".".repeat(pointCount)
     value += randomPick
-    emojiNum, word1Num, word2Num = "","",""
+    emojiStr, wordStr = "","",""
   }
   let element=document.getElementById("main");
 element.innerText = value

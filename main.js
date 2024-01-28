@@ -5,13 +5,13 @@ function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function create(){
-  document.getElementById("ver").innerText="script ver:1.2.6";
+  document.getElementById("ver").innerText="script ver:1.2.7";
   let value = ""
   let emojiStr = ""
   let wordStr = ""
-  for(let i=0;i<document.getElementById("sentenceLength").value;i++){
+  for(let i=0;i<Number(document.getElementById("sentenceLength").value;i++)){
     
-    let emojiCount = rand(0,document.getElementById("heartCount").value);
+    let emojiCount = rand(0,Number(document.getElementById("heartCount").value));
     if(emojicount!=0){
       for(let j=0;j<emojiCount;j++){
         let emojiNum = rand(0,5)
@@ -19,7 +19,7 @@ function create(){
       }
     }
     
-    let wordCount = rand(1,document.getElementById("charLimit").value);
+    let wordCount = rand(1,Number(document.getElementById("charLimit").value));
     let word2Num = rand(0,5)
     wordStr += word2[word2Num]
     for(let j=0;j<wordCount-1;j++){

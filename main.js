@@ -10,7 +10,7 @@ function create(){
   let wordStr = ""
   for(let i=0;i<rand(1,20);i++){
     
-    let emojiCount = rand(0,2)
+    let emojiCount = rand(0,4)
     for(let j=1;j<emojiCount;j++){
       let emojiNum = rand(0,5)
         emojiStr += emoji[emojiNum]

@@ -12,9 +12,11 @@ function create(){
   for(let i=0;i<document.getElementById("sentenceLength").value;i++){
     
     let emojiCount = document.getElementById("heartCount").value;
-    for(let j=0;j<emojiCount;j++){
-      let emojiNum = rand(0,5)
+    if(emojicount!=0){
+      for(let j=0;j<emojiCount;j++){
+        let emojiNum = rand(0,5)
         emojiStr += emoji[emojiNum]
+      }
     }
     
     let wordCount = document.getElementById("charLimit").value;

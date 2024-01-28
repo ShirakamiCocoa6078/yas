@@ -5,7 +5,7 @@ function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function create(){
-  document.getElementById("ver").innerText="ver:1.2.3";
+  document.getElementById("ver").innerText="script ver:1.2.6";
   let value = ""
   let emojiStr = ""
   let wordStr = ""

@@ -1,7 +1,6 @@
 let emoji = "❤,💖,💕,❤️‍🔥,❤️‍🩹,💓".split(",");
 let word1 = "아,앗,앙,오,옷,우,웅,웃,으,읏,응,잇,엣".split(",");
 let word2 = "흐,하,헤,핫,호,흣".split(",");
-let scriptVer = "1.3"
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -45,6 +44,9 @@ function copyMessage(){
   const text = document.getElementById('main').textContent
   const textarea = document.createElement('textarea')
   textarea.textContent = text;
+  let sendText = text;
+  let pageUrl = 'https://shirakamicocoa6078.github.io/yas/';
+  window.open(`https://twitter.com/intent/tweet?text=${sendText}&url=${pageUrl}`);
   document.body.append(textarea)
   textarea.select()
   document.execCommand('copy');

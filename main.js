@@ -41,3 +41,12 @@ function create() {
   let element = document.getElementById("main");
   element.innerText = value;
 }
+function copyMessage(){
+  const text = document.getElementById('main').textContent
+  const textarea = document.createElement('textarea')
+  textarea.textContent = text;
+  document.body.append(textarea)
+  textarea.select()
+  document.execCommand('copy');
+  textarea.remove()
+}

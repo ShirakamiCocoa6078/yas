@@ -44,11 +44,11 @@ function copyMessage(){
   const text = document.getElementById('main').textContent
   const textarea = document.createElement('textarea')
   textarea.textContent = text;
-  let sendText = text;
-  let pageUrl = 'https://shirakamicocoa6078.github.io/yas/';
-  window.open(`https://twitter.com/intent/tweet?text=${sendText}&url=${pageUrl}`);
   document.body.append(textarea)
   textarea.select()
   document.execCommand('copy');
   textarea.remove()
+  let sendText = text;
+  let pageUrl = 'https://shirakamicocoa6078.github.io/yas/';
+  window.open(`https://twitter.com/intent/tweet?text=${sendText}&url=${pageUrl}`);
 }

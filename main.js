@@ -1,7 +1,7 @@
 let emoji = "❤,💖,💕,❤️‍🔥,❤️‍🩹,💓".split(",");
 let word1 = "아,앗,앙,오,옷,우,웅,웃,으,읏,응,잇,엣".split(",");
 let word2 = "흐,하,헤,핫,호,흣".split(",");
-let scriptVer = "1.2.8"
+let scriptVer = "1.3"
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }

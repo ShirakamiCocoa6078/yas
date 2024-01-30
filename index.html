@@ -14,7 +14,7 @@
   }
   input[type="range"] {
       width: 80%;
-      margin: 10px 0;
+      margin: 0 auto;
   }
   label {
       display: block;
@@ -26,41 +26,38 @@
  
 
 <body>
-<label for="heartCount">하트 이모지의 최대치(최소치는 0): </label>
+ <label for="heartCount">하트 이모지의 최대치(최소치는 0): </label>
  <input type="range" id="heartCount" name="heartCount" min="0" max="5" value="0" />
  <output id="heartOutput">0</output>
- 
+  
  <label for="charLimit">글자의 최대치(최소치는 1): </label>
  <input type="range" id="charLimit" name="charLimit" min="1" max="10" value="1" />
  <output id="charOutput">1</output>
- 
+  
  <label for="sentenceLength">문장 길이: </label>
  <input type="range" id="sentenceLength" name="sentenceLength" min="1" max="30" value="1" />
  <output id="sentenceOutput">1</output>
  
- <button onclick="create()">
-  만들기
- </button>
-
-<h1 id="main"></h1>
+ <h1 id="main"></h1>
+ <button onclick="create()">만들기</button>
  <button onclick="copyMessage()">복사하기</button>
  <button onclick="twitter()">트위터에 공유하기</button>
-<h5>ver:1.3.7</h5>
-<a href='https://twitter.com/Shirakami_cocoa'>created py @Shirakami_cocoa</a>
-<h6>사이트의 2차 창작 및 영리적 이용 가능. 가능하다면 개발자한테 어떤것인진 말씀주시면 감사하겠습니다.</h6>
-<h6>정치적, 종교적 및 기타 개인적 사상을 알리거나, 사회에 피해가 될 수 있는 방식의 이용은 허가하지 않으며, 이용 자체에 제한을 두지 않으나 논란이 될 경우 개발자와의 관계는 일절 없음을 밝힙니다.</h6>
-<script src="./main.js">
-</script>
- <script>
-  document.getElementById("heartCount").addEventListener("input", updateOutput);
-   document.getElementById("charLimit").addEventListener("input", updateOutput);
-   document.getElementById("sentenceLength").addEventListener("input", updateOutput);
-
-   function updateOutput(event){
-     const currentValue = event.target.value;
-      event.target.nextElementSibling.textContent = currentValue;
-    }
+ <h5>ver:1.4</h5>
+ <a href='https://twitter.com/Shirakami_cocoa'>created py @Shirakami_cocoa</a>
+ <h6>사이트의 2차 창작 및 영리적 이용 가능. 가능하다면 개발자한테 어떤것인진 말씀주시면 감사하겠습니다.</h6>
+ <h6>정치적, 종교적 및 기타 개인적 사상을 알리거나, 사회에 피해가 될 수 있는 방식의 이용은 허가하지 않으며, 이용 자체에 제한을 두지 않으나 논란이 될 경우 개발자와의 관계는 일절 없음을 밝힙니다.</h6>
+ <script src="./main.js">
  </script>
+  <script>
+   document.getElementById("heartCount").addEventListener("input", updateOutput);
+    document.getElementById("charLimit").addEventListener("input", updateOutput);
+    document.getElementById("sentenceLength").addEventListener("input", updateOutput);
+ 
+    function updateOutput(event){
+      const currentValue = event.target.value;
+       event.target.nextElementSibling.textContent = currentValue;
+     }
+  </script>
   
 </body>
 

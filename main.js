@@ -48,6 +48,9 @@ function copyMessage(){
   textarea.select()
   document.execCommand('copy');
   textarea.remove()
+}
+function twitter(){
+  const text = document.getElementById('main').textContent
   let sendText = text;
   let pageUrl = 'https://shirakamicocoa6078.github.io/yas/';
   window.open(`https://twitter.com/intent/tweet?text=${sendText}&url=${pageUrl}`);
